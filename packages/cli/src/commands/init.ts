@@ -1,10 +1,10 @@
 import chalk from "chalk";
 import inquirer from "inquirer";
 import fs from 'fs-extra';
-import path = require("path");
+import path from "path";
 
 
-export async function init() {
+export async function initCommand() {
     console.log(chalk.cyan("Welcome to UI Library"));
     const answers = await inquirer.prompt([
         { type: 'input', name: 'projectName', message: 'Project name:', default: 'my-ui-project' },
@@ -25,5 +25,4 @@ export async function init() {
 
     console.log(chalk.green(`Project ${answers.projectName} initialized!`));
     console.log(chalk.gray(`cd ${answers.projectName} to get started.`));
-
 }

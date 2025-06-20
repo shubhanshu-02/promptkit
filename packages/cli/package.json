@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "build": "tsup src/index.ts --format esm --dts --out-dir dist",
+  "dev": "tsup src/index.ts --watch",
+  "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +20,9 @@
     "ora": "^8.2.0",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4"
   }
+  
 }
