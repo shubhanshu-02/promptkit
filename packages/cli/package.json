@@ -2,7 +2,11 @@
   "name": "cli",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
+    "bin": {
+    "my-ui-lib": "dist/index.js"
+  },
   "scripts": {
   "build": "tsup src/index.ts --format esm --dts --out-dir dist",
   "dev": "tsup src/index.ts --watch",
@@ -26,3 +30,4 @@
   }
   
 }
+  

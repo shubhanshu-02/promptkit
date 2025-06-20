@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import { initCommand } from './commands/init'
+import { initCommand } from './commands/init.js'
 
 const program = new Command;
 
@@ -14,3 +14,6 @@ program
   .command('init')
   .description('Initialize a new project with the UI library')
   .action(initCommand);
+
+
+program.parse()
